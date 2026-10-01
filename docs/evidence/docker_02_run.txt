@@ -1,0 +1,13 @@
+58a18178b574ecd95fdfa3b3fa15d7279dbd9066a3eae87b7cffa9992494768c
+
+StatusCode : 200
+Content    : {"status":"ok","version":"v1"}
+             
+
+
+StatusCode : 200
+Content    : {"rooms":[{"average_score":99.25,"pair_explanations":[{"explanation":{"top_differing_factors":["sleep_schedule","study_hours"],"top_matching_factors":["cleanliness","noise_tolerance"]},"score":99.25,"student_ids":["s0","s3"]}],"room_id":"R001","signal":"GOOD","student_ids":["s0","s3"]},{"average_score":99.36,"pair_explanations":[{"explanation":{"top_differing_factors":["noise_tolerance","study_hours"],"top_matching_factors":["cleanliness","sleep_schedule"]},"score":99.36,"student_ids":["s1","s5"]}],"room_id":"R002","signal":"GOOD","student_ids":["s1","s5"]},{"average_score":99.3,"pair_explanations":[{"explanation":{"top_differing_factors":["noise_tolerance","study_hours"],"top_matching_factors":["cleanliness","sleep_schedule"]},"score":99.3,"student_ids":["s2","s4"]}],"room_id":"R003","signal":"GOOD","student_ids":["s2","s4"]},{"average_score":99.3,"pair_explanations":[{"explanation":{"top_differing_factors":["sleep_schedule","study_hours"],"top_matching_factors":["cleanliness","noise_tolerance"]},"score":99.3,"student_ids":["s10","s7"]}],"room_id":"R004","signal":"GOOD","student_ids":["s10","s7"]},{"average_score":99.36,"pair_explanations":[{"explanation":{"top_differing_factors":["sleep_schedule","study_hours"],"top_matching_factors":["cleanliness","noise_tolerance"]},"score":99.36,"student_ids":["s11","s8"]}],"room_id":"R005","signal":"GOOD","student_ids":["s11","s8"]},{"average_score":99.25,"pair_explanations":[{"explanation":{"top_differing_factors":["sleep_schedule","study_hours"],"top_matching_factors":["cleanliness","noise_tolerance"]},"score":99.25,"student_ids":["s6","s9"]}],"room_id":"R006","signal":"GOOD","student_ids":["s6","s9"]}],"students_allocated":12,"warnings":[]}
+             
+
+roomfit-verify
+roomfit-verify

@@ -1,0 +1,53 @@
+
+PLAY [Configure RoomFit service] ***********************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [Install packages] ********************************************************
+ok: [localhost]
+
+TASK [Create RoomFit system user] **********************************************
+ok: [localhost]
+
+TASK [Create operator user] ****************************************************
+ok: [localhost]
+
+TASK [Create service paths] ****************************************************
+ok: [localhost] => (item=/opt/roomfit)
+ok: [localhost] => (item=/etc/roomfit)
+ok: [localhost] => (item=/var/log/roomfit)
+
+TASK [Copy application] ********************************************************
+ok: [localhost]
+
+TASK [Copy requirements] *******************************************************
+ok: [localhost]
+
+TASK [Create virtual environment] **********************************************
+ok: [localhost]
+
+TASK [Install Python requirements] *********************************************
+ok: [localhost]
+
+TASK [Install environment file] ************************************************
+ok: [localhost]
+
+TASK [Install systemd unit] ****************************************************
+ok: [localhost]
+
+TASK [Install logrotate policy] ************************************************
+ok: [localhost]
+
+TASK [Flush handlers] **********************************************************
+
+TASK [Wait for API port] *******************************************************
+ok: [localhost]
+
+TASK [Check health endpoint] ***************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=14   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

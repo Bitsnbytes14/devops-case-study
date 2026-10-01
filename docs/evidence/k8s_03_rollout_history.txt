@@ -1,0 +1,9 @@
+deployment.apps/roomfit image updated
+Waiting for deployment "roomfit" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "roomfit" rollout to finish: 1 old replicas are pending termination...
+deployment "roomfit" successfully rolled out
+deployment.apps/roomfit 
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+

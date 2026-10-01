@@ -1,0 +1,165 @@
+2026-10-01T19:51:30.898114973Z stderr F I1001 19:51:30.897528       1 serving.go:386] Generated self-signed cert in-memory
+2026-10-01T19:51:31.334580672Z stderr F I1001 19:51:31.334386       1 controllermanager.go:185] "Starting" version="v1.32.2"
+2026-10-01T19:51:31.334605617Z stderr F I1001 19:51:31.334419       1 controllermanager.go:187] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+2026-10-01T19:51:31.339372262Z stderr F I1001 19:51:31.339144       1 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/etc/kubernetes/pki/ca.crt"
+2026-10-01T19:51:31.339643176Z stderr F I1001 19:51:31.339144       1 dynamic_cafile_content.go:161] "Starting controller" name="request-header::/etc/kubernetes/pki/front-proxy-ca.crt"
+2026-10-01T19:51:31.340231883Z stderr F I1001 19:51:31.339926       1 secure_serving.go:213] Serving securely on 127.0.0.1:10257
+2026-10-01T19:51:31.340241577Z stderr F I1001 19:51:31.339998       1 tlsconfig.go:243] "Starting DynamicServingCertificateController"
+2026-10-01T19:51:31.340387426Z stderr F I1001 19:51:31.340245       1 leaderelection.go:257] attempting to acquire leader lease kube-system/kube-controller-manager...
+2026-10-01T19:51:36.331302Z stderr F E1001 19:51:36.331149       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2026-10-01T19:51:45.284535175Z stderr F E1001 19:51:45.027146       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": context deadline exceeded
+2026-10-01T19:51:52.363304659Z stderr F E1001 19:51:52.363025       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused - error from a previous attempt: read tcp 172.23.0.2:39990->172.23.0.2:6443: read: connection reset by peer
+2026-10-01T19:51:56.009199226Z stderr F E1001 19:51:56.009011       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:01.532688209Z stderr F E1001 19:51:59.164275       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:01.868669365Z stderr F E1001 19:52:01.868498       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:05.232888009Z stderr F E1001 19:52:05.232675       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:08.08220475Z stderr F E1001 19:52:08.082003       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:11.235649929Z stderr F E1001 19:52:11.235459       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:15.530883118Z stderr F E1001 19:52:15.530722       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:18.966357329Z stderr F E1001 19:52:18.966205       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:22.150916457Z stderr F E1001 19:52:22.150676       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:26.26688832Z stderr F E1001 19:52:26.266455       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:30.558633961Z stderr F E1001 19:52:30.558479       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:32.930379326Z stderr F E1001 19:52:32.930169       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:35.469688587Z stderr F E1001 19:52:35.469508       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: Get "https://172.23.0.2:6443/apis/coordination.k8s.io/v1/namespaces/kube-system/leases/kube-controller-manager?timeout=5s": dial tcp 172.23.0.2:6443: connect: connection refused
+2026-10-01T19:52:42.397785391Z stderr F E1001 19:52:42.397663       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:52:46.312451075Z stderr F E1001 19:52:46.312287       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:52:50.459119096Z stderr F E1001 19:52:50.458894       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:52:53.693405912Z stderr F E1001 19:52:53.693187       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:52:57.638788268Z stderr F E1001 19:52:57.638628       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:53:01.825974908Z stderr F E1001 19:53:01.825831       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:53:05.74873872Z stderr F E1001 19:53:05.748597       1 leaderelection.go:436] error retrieving resource lock kube-system/kube-controller-manager: leases.coordination.k8s.io "kube-controller-manager" is forbidden: User "system:kube-controller-manager" cannot get resource "leases" in API group "coordination.k8s.io" in the namespace "kube-system"
+2026-10-01T19:53:09.515323668Z stderr F I1001 19:53:09.515128       1 leaderelection.go:271] successfully acquired lease kube-system/kube-controller-manager
+2026-10-01T19:53:09.517133833Z stderr F I1001 19:53:09.515230       1 event.go:389] "Event occurred" object="kube-system/kube-controller-manager" fieldPath="" kind="Lease" apiVersion="coordination.k8s.io/v1" type="Normal" reason="LeaderElection" message="roomfit-control-plane_dcbbf3aa-2529-4c90-bf84-55bc65ecc2d1 became leader"
+2026-10-01T19:53:09.542359676Z stderr F I1001 19:53:09.541196       1 controllermanager.go:765] "Started controller" controller="serviceaccount-token-controller"
+2026-10-01T19:53:09.5429832Z stderr F I1001 19:53:09.541625       1 shared_informer.go:313] Waiting for caches to sync for tokens
+2026-10-01T19:53:09.574926967Z stderr F I1001 19:53:09.574697       1 controllermanager.go:765] "Started controller" controller="certificatesigningrequest-approving-controller"
+2026-10-01T19:53:09.575229217Z stderr F I1001 19:53:09.575068       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-approving-controller" name="csrapproving"
+2026-10-01T19:53:09.575242395Z stderr F I1001 19:53:09.575144       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrapproving
+2026-10-01T19:53:09.643511193Z stderr F I1001 19:53:09.642949       1 shared_informer.go:320] Caches are synced for tokens
+2026-10-01T19:53:09.659348159Z stderr F I1001 19:53:09.659087       1 controllermanager.go:765] "Started controller" controller="legacy-serviceaccount-token-cleaner-controller"
+2026-10-01T19:53:09.659394504Z stderr F I1001 19:53:09.659317       1 legacy_serviceaccount_token_cleaner.go:103] "Starting legacy service account token cleaner controller" logger="legacy-serviceaccount-token-cleaner-controller"
+2026-10-01T19:53:09.659400042Z stderr F I1001 19:53:09.659332       1 shared_informer.go:313] Waiting for caches to sync for legacy-service-account-token-cleaner
+2026-10-01T19:53:09.665618864Z stderr F I1001 19:53:09.665258       1 controllermanager.go:765] "Started controller" controller="certificatesigningrequest-cleaner-controller"
+2026-10-01T19:53:09.66563561Z stderr F I1001 19:53:09.665468       1 cleaner.go:83] "Starting CSR cleaner controller" logger="certificatesigningrequest-cleaner-controller"
+2026-10-01T19:53:09.682215927Z stderr F I1001 19:53:09.682079       1 controllermanager.go:765] "Started controller" controller="token-cleaner-controller"
+2026-10-01T19:53:09.682282703Z stderr F I1001 19:53:09.682198       1 tokencleaner.go:117] "Starting token cleaner controller" logger="token-cleaner-controller"
+2026-10-01T19:53:09.682296018Z stderr F I1001 19:53:09.682235       1 shared_informer.go:313] Waiting for caches to sync for token_cleaner
+2026-10-01T19:53:09.682298597Z stderr F I1001 19:53:09.682244       1 shared_informer.go:320] Caches are synced for token_cleaner
+2026-10-01T19:53:09.699515114Z stderr F I1001 19:53:09.699277       1 controllermanager.go:765] "Started controller" controller="persistentvolume-attach-detach-controller"
+2026-10-01T19:53:09.699550424Z stderr F I1001 19:53:09.699388       1 attach_detach_controller.go:338] "Starting attach detach controller" logger="persistentvolume-attach-detach-controller"
+2026-10-01T19:53:09.699553016Z stderr F I1001 19:53:09.699410       1 shared_informer.go:313] Waiting for caches to sync for attach detach
+2026-10-01T19:53:09.711441985Z stderr F I1001 19:53:09.711213       1 controllermanager.go:765] "Started controller" controller="persistentvolume-expander-controller"
+2026-10-01T19:53:09.711457781Z stderr F I1001 19:53:09.711254       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="volumeattributesclass-protection-controller" requiredFeatureGates=["VolumeAttributesClass"]
+2026-10-01T19:53:09.711666317Z stderr F I1001 19:53:09.711455       1 expand_controller.go:329] "Starting expand controller" logger="persistentvolume-expander-controller"
+2026-10-01T19:53:09.711677929Z stderr F I1001 19:53:09.711513       1 shared_informer.go:313] Waiting for caches to sync for expand
+2026-10-01T19:53:09.759688346Z stderr F I1001 19:53:09.759492       1 controllermanager.go:765] "Started controller" controller="replicationcontroller-controller"
+2026-10-01T19:53:09.759981786Z stderr F I1001 19:53:09.759728       1 replica_set.go:217] "Starting controller" logger="replicationcontroller-controller" name="replicationcontroller"
+2026-10-01T19:53:09.759989418Z stderr F I1001 19:53:09.759768       1 shared_informer.go:313] Waiting for caches to sync for ReplicationController
+2026-10-01T19:53:09.773609127Z stderr F I1001 19:53:09.773344       1 controllermanager.go:765] "Started controller" controller="job-controller"
+2026-10-01T19:53:09.773647642Z stderr F I1001 19:53:09.773524       1 job_controller.go:243] "Starting job controller" logger="job-controller"
+2026-10-01T19:53:09.773651994Z stderr F I1001 19:53:09.773565       1 shared_informer.go:313] Waiting for caches to sync for job
+2026-10-01T19:53:09.777659734Z stderr F I1001 19:53:09.777021       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-kubelet-serving"
+2026-10-01T19:53:09.777672889Z stderr F I1001 19:53:09.777083       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-kubelet-serving
+2026-10-01T19:53:09.777678157Z stderr F I1001 19:53:09.777103       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-10-01T19:53:09.777679467Z stderr F I1001 19:53:09.777254       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-kubelet-client"
+2026-10-01T19:53:09.777680675Z stderr F I1001 19:53:09.777276       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-kubelet-client
+2026-10-01T19:53:09.777681847Z stderr F I1001 19:53:09.777297       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-10-01T19:53:09.777683009Z stderr F I1001 19:53:09.777378       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-kube-apiserver-client"
+2026-10-01T19:53:09.777684502Z stderr F I1001 19:53:09.777394       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-kube-apiserver-client
+2026-10-01T19:53:09.777685992Z stderr F I1001 19:53:09.777415       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-10-01T19:53:09.777687225Z stderr F I1001 19:53:09.777564       1 controllermanager.go:765] "Started controller" controller="certificatesigningrequest-signing-controller"
+2026-10-01T19:53:09.77809305Z stderr F I1001 19:53:09.777774       1 certificate_controller.go:120] "Starting certificate controller" logger="certificatesigningrequest-signing-controller" name="csrsigning-legacy-unknown"
+2026-10-01T19:53:09.778122424Z stderr F I1001 19:53:09.777825       1 shared_informer.go:313] Waiting for caches to sync for certificate-csrsigning-legacy-unknown
+2026-10-01T19:53:09.77812629Z stderr F I1001 19:53:09.777853       1 dynamic_serving_content.go:135] "Starting controller" name="csr-controller::/etc/kubernetes/pki/ca.crt::/etc/kubernetes/pki/ca.key"
+2026-10-01T19:53:09.789499277Z stderr F I1001 19:53:09.789218       1 controllermanager.go:765] "Started controller" controller="ttl-after-finished-controller"
+2026-10-01T19:53:09.789523986Z stderr F I1001 19:53:09.789273       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="storageversion-garbage-collector-controller" requiredFeatureGates=["APIServerIdentity","StorageVersionAPI"]
+2026-10-01T19:53:09.789527149Z stderr F I1001 19:53:09.789341       1 controllermanager.go:743] "Warning: skipping controller" controller="storage-version-migrator-controller"
+2026-10-01T19:53:09.789706758Z stderr F I1001 19:53:09.789568       1 ttlafterfinished_controller.go:112] "Starting TTL after finished controller" logger="ttl-after-finished-controller"
+2026-10-01T19:53:09.789735734Z stderr F I1001 19:53:09.789588       1 shared_informer.go:313] Waiting for caches to sync for TTL after finished
+2026-10-01T19:53:09.824897706Z stderr F W1001 19:53:09.824638       1 shared_informer.go:597] resyncPeriod 17h10m57.793538251s is smaller than resyncCheckPeriod 17h28m19.221604088s and the informer has already started. Changing it to 17h28m19.221604088s
+2026-10-01T19:53:09.824917224Z stderr F I1001 19:53:09.824783       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="daemonsets.apps"
+2026-10-01T19:53:09.824923176Z stderr F I1001 19:53:09.824809       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="leases.coordination.k8s.io"
+2026-10-01T19:53:09.824930676Z stderr F I1001 19:53:09.824835       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="endpointslices.discovery.k8s.io"
+2026-10-01T19:53:09.824931902Z stderr F I1001 19:53:09.824872       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="limitranges"
+2026-10-01T19:53:09.825152166Z stderr F I1001 19:53:09.824982       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="controllerrevisions.apps"
+2026-10-01T19:53:09.825169877Z stderr F I1001 19:53:09.825036       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="horizontalpodautoscalers.autoscaling"
+2026-10-01T19:53:09.825171567Z stderr F I1001 19:53:09.825069       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="networkpolicies.networking.k8s.io"
+2026-10-01T19:53:09.825178037Z stderr F I1001 19:53:09.825142       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="statefulsets.apps"
+2026-10-01T19:53:09.825328797Z stderr F I1001 19:53:09.825183       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="jobs.batch"
+2026-10-01T19:53:09.825339696Z stderr F I1001 19:53:09.825271       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="poddisruptionbudgets.policy"
+2026-10-01T19:53:09.825423715Z stderr F I1001 19:53:09.825310       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="replicasets.apps"
+2026-10-01T19:53:09.825464943Z stderr F I1001 19:53:09.825398       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="cronjobs.batch"
+2026-10-01T19:53:09.825510771Z stderr F I1001 19:53:09.825456       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="podtemplates"
+2026-10-01T19:53:09.82559851Z stderr F I1001 19:53:09.825497       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="endpoints"
+2026-10-01T19:53:09.825607024Z stderr F I1001 19:53:09.825539       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="csistoragecapacities.storage.k8s.io"
+2026-10-01T19:53:09.825776232Z stderr F I1001 19:53:09.825613       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="ingresses.networking.k8s.io"
+2026-10-01T19:53:09.825781859Z stderr F I1001 19:53:09.825681       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="serviceaccounts"
+2026-10-01T19:53:09.825791105Z stderr F I1001 19:53:09.825749       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="rolebindings.rbac.authorization.k8s.io"
+2026-10-01T19:53:09.825923892Z stderr F I1001 19:53:09.825787       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="roles.rbac.authorization.k8s.io"
+2026-10-01T19:53:09.825931475Z stderr F I1001 19:53:09.825826       1 resource_quota_monitor.go:227] "QuotaMonitor created object count evaluator" logger="resourcequota-controller" resource="deployments.apps"
+2026-10-01T19:53:09.825941384Z stderr F I1001 19:53:09.825858       1 controllermanager.go:765] "Started controller" controller="resourcequota-controller"
+2026-10-01T19:53:09.82608163Z stderr F I1001 19:53:09.825927       1 resource_quota_controller.go:300] "Starting resource quota controller" logger="resourcequota-controller"
+2026-10-01T19:53:09.826095282Z stderr F I1001 19:53:09.825991       1 shared_informer.go:313] Waiting for caches to sync for resource quota
+2026-10-01T19:53:09.826097506Z stderr F I1001 19:53:09.826014       1 resource_quota_monitor.go:308] "QuotaMonitor running" logger="resourcequota-controller"
+2026-10-01T19:53:09.927793543Z stderr F I1001 19:53:09.927505       1 controllermanager.go:765] "Started controller" controller="namespace-controller"
+2026-10-01T19:53:09.927818901Z stderr F I1001 19:53:09.927617       1 namespace_controller.go:202] "Starting namespace controller" logger="namespace-controller"
+2026-10-01T19:53:09.927822692Z stderr F I1001 19:53:09.927632       1 shared_informer.go:313] Waiting for caches to sync for namespace
+2026-10-01T19:53:10.071772863Z stderr F I1001 19:53:10.071416       1 controllermanager.go:765] "Started controller" controller="bootstrap-signer-controller"
+2026-10-01T19:53:10.07179971Z stderr F I1001 19:53:10.071477       1 shared_informer.go:313] Waiting for caches to sync for bootstrap_signer
+2026-10-01T19:53:10.22068037Z stderr F I1001 19:53:10.220483       1 controllermanager.go:765] "Started controller" controller="statefulset-controller"
+2026-10-01T19:53:10.220702159Z stderr F I1001 19:53:10.220585       1 stateful_set.go:166] "Starting stateful set controller" logger="statefulset-controller"
+2026-10-01T19:53:10.220704631Z stderr F I1001 19:53:10.220601       1 shared_informer.go:313] Waiting for caches to sync for stateful set
+2026-10-01T19:53:10.387159036Z stderr F I1001 19:53:10.386941       1 controllermanager.go:765] "Started controller" controller="clusterrole-aggregation-controller"
+2026-10-01T19:53:10.387185386Z stderr F I1001 19:53:10.387029       1 clusterroleaggregation_controller.go:194] "Starting ClusterRoleAggregator controller" logger="clusterrole-aggregation-controller"
+2026-10-01T19:53:10.387203725Z stderr F I1001 19:53:10.387051       1 shared_informer.go:313] Waiting for caches to sync for ClusterRoleAggregator
+2026-10-01T19:53:10.522078148Z stderr F I1001 19:53:10.521780       1 controllermanager.go:765] "Started controller" controller="ephemeral-volume-controller"
+2026-10-01T19:53:10.522217792Z stderr F I1001 19:53:10.521835       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="resourceclaim-controller" requiredFeatureGates=["DynamicResourceAllocation"]
+2026-10-01T19:53:10.52222307Z stderr F I1001 19:53:10.521894       1 controller.go:173] "Starting ephemeral volume controller" logger="ephemeral-volume-controller"
+2026-10-01T19:53:10.522226143Z stderr F I1001 19:53:10.521906       1 shared_informer.go:313] Waiting for caches to sync for ephemeral
+2026-10-01T19:53:10.685390204Z stderr F I1001 19:53:10.685187       1 controllermanager.go:765] "Started controller" controller="taint-eviction-controller"
+2026-10-01T19:53:10.685411804Z stderr F I1001 19:53:10.685262       1 taint_eviction.go:281] "Starting" logger="taint-eviction-controller" controller="taint-eviction-controller"
+2026-10-01T19:53:10.695100791Z stderr F I1001 19:53:10.694913       1 taint_eviction.go:287] "Sending events to api server" logger="taint-eviction-controller"
+2026-10-01T19:53:10.695126304Z stderr F I1001 19:53:10.694983       1 shared_informer.go:313] Waiting for caches to sync for taint-eviction-controller
+2026-10-01T19:53:10.832388683Z stderr F I1001 19:53:10.832218       1 controllermanager.go:765] "Started controller" controller="serviceaccount-controller"
+2026-10-01T19:53:10.832417174Z stderr F I1001 19:53:10.832297       1 serviceaccounts_controller.go:114] "Starting service account controller" logger="serviceaccount-controller"
+2026-10-01T19:53:10.832420839Z stderr F I1001 19:53:10.832307       1 shared_informer.go:313] Waiting for caches to sync for service account
+2026-10-01T19:53:10.977204528Z stderr F I1001 19:53:10.976986       1 controllermanager.go:765] "Started controller" controller="deployment-controller"
+2026-10-01T19:53:10.977245152Z stderr F I1001 19:53:10.977131       1 deployment_controller.go:173] "Starting controller" logger="deployment-controller" controller="deployment"
+2026-10-01T19:53:10.977251089Z stderr F I1001 19:53:10.977160       1 shared_informer.go:313] Waiting for caches to sync for deployment
+2026-10-01T19:53:11.270061015Z stderr F I1001 19:53:11.269801       1 controllermanager.go:765] "Started controller" controller="horizontal-pod-autoscaler-controller"
+2026-10-01T19:53:11.270092208Z stderr F I1001 19:53:11.269828       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="selinux-warning-controller" requiredFeatureGates=["SELinuxChangePolicy"]
+2026-10-01T19:53:11.270097861Z stderr F I1001 19:53:11.269877       1 horizontal.go:201] "Starting HPA controller" logger="horizontal-pod-autoscaler-controller"
+2026-10-01T19:53:11.270101987Z stderr F I1001 19:53:11.269885       1 shared_informer.go:313] Waiting for caches to sync for HPA
+2026-10-01T19:53:11.422601724Z stderr F W1001 19:53:11.422436       1 type.go:183] The watchlist request for nodes ended with an error, falling back to the standard LIST semantics, err = nodes is forbidden: User "system:serviceaccount:kube-system:node-controller" cannot watch resource "nodes" in API group "" at the cluster scope
+2026-10-01T19:53:11.425828497Z stderr F I1001 19:53:11.425643       1 range_allocator.go:112] "No Secondary Service CIDR provided. Skipping filtering out secondary service addresses" logger="node-ipam-controller"
+2026-10-01T19:53:11.425850369Z stderr F I1001 19:53:11.425717       1 controllermanager.go:765] "Started controller" controller="node-ipam-controller"
+2026-10-01T19:53:11.425856142Z stderr F I1001 19:53:11.425722       1 controllermanager.go:723] "Skipping a cloud provider controller" controller="node-route-controller"
+2026-10-01T19:53:11.42586055Z stderr F I1001 19:53:11.425728       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="kube-apiserver-serving-clustertrustbundle-publisher-controller" requiredFeatureGates=["ClusterTrustBundle"]
+2026-10-01T19:53:11.425876999Z stderr F I1001 19:53:11.425741       1 controllermanager.go:717] "Controller is disabled by a feature gate" controller="service-cidr-controller" requiredFeatureGates=["MultiCIDRServiceAllocator"]
+2026-10-01T19:53:11.426156709Z stderr F I1001 19:53:11.426027       1 node_ipam_controller.go:141] "Starting ipam controller" logger="node-ipam-controller"
+2026-10-01T19:53:11.426165754Z stderr F I1001 19:53:11.426056       1 shared_informer.go:313] Waiting for caches to sync for node
+2026-10-01T19:53:11.571009742Z stderr F I1001 19:53:11.570712       1 controllermanager.go:765] "Started controller" controller="endpoints-controller"
+2026-10-01T19:53:11.571038095Z stderr F I1001 19:53:11.570786       1 endpoints_controller.go:182] "Starting endpoint controller" logger="endpoints-controller"
+2026-10-01T19:53:11.571042253Z stderr F I1001 19:53:11.570795       1 shared_informer.go:313] Waiting for caches to sync for endpoint
+2026-10-01T19:53:11.721038407Z stderr F I1001 19:53:11.720817       1 controllermanager.go:765] "Started controller" controller="pod-garbage-collector-controller"
+2026-10-01T19:53:11.72106595Z stderr F I1001 19:53:11.720956       1 gc_controller.go:99] "Starting GC controller" logger="pod-garbage-collector-controller"
+2026-10-01T19:53:11.721068383Z stderr F I1001 19:53:11.721022       1 shared_informer.go:313] Waiting for caches to sync for GC
+2026-10-01T19:53:12.567261718Z stderr F I1001 19:53:12.567117       1 controllermanager.go:765] "Started controller" controller="disruption-controller"
+2026-10-01T19:53:12.567276872Z stderr F I1001 19:53:12.567180       1 disruption.go:452] "Sending events to api server." logger="disruption-controller"
+2026-10-01T19:53:12.567278257Z stderr F I1001 19:53:12.567218       1 disruption.go:463] "Starting disruption controller" logger="disruption-controller"
+2026-10-01T19:53:12.567280364Z stderr F I1001 19:53:12.567225       1 shared_informer.go:313] Waiting for caches to sync for disruption
+2026-10-01T19:53:13.626380371Z stderr F I1001 19:53:13.626156       1 controllermanager.go:765] "Started controller" controller="cronjob-controller"
+2026-10-01T19:53:13.6265274Z stderr F I1001 19:53:13.626411       1 cronjob_controllerv2.go:145] "Starting cronjob controller v2" logger="cronjob-controller"
+2026-10-01T19:53:13.62653556Z stderr F I1001 19:53:13.626433       1 shared_informer.go:313] Waiting for caches to sync for cronjob
+2026-10-01T19:53:16.064127484Z stderr F I1001 19:53:16.063972       1 controllermanager.go:765] "Started controller" controller="ttl-controller"
+2026-10-01T19:53:16.064474132Z stderr F I1001 19:53:16.064087       1 ttl_controller.go:127] "Starting TTL controller" logger="ttl-controller"
+2026-10-01T19:53:16.064479727Z stderr F I1001 19:53:16.064377       1 shared_informer.go:313] Waiting for caches to sync for TTL
+2026-10-01T19:53:16.141558369Z stderr F I1001 19:53:16.141315       1 node_lifecycle_controller.go:432] "Controller will reconcile labels" logger="node-lifecycle-controller"
+2026-10-01T19:53:16.141578086Z stderr F I1001 19:53:16.141351       1 controllermanager.go:765] "Started controller" controller="node-lifecycle-controller"
+2026-10-01T19:53:16.141584992Z stderr F I1001 19:53:16.141469       1 node_lifecycle_controller.go:466] "Sending events to api server" logger="node-lifecycle-controller"
+2026-10-01T19:53:16.141586394Z stderr F I1001 19:53:16.141527       1 node_lifecycle_controller.go:477] "Starting node controller" logger="node-lifecycle-controller"
+2026-10-01T19:53:16.141588029Z stderr F I1001 19:53:16.141535       1 shared_informer.go:313] Waiting for caches to sync for taint
+2026-10-01T19:53:18.48967008Z stderr F I1001 19:53:18.489438       1 controllermanager.go:765] "Started controller" controller="root-ca-certificate-publisher-controller"
+2026-10-01T19:53:18.489835255Z stderr F I1001 19:53:18.489700       1 publisher.go:107] "Starting root CA cert publisher controller" logger="root-ca-certificate-publisher-controller"
+2026-10-01T19:53:18.489845723Z stderr F I1001 19:53:18.489732       1 shared_informer.go:313] Waiting for caches to sync for crt configmap

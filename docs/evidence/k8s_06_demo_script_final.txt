@@ -1,0 +1,126 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 638B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 94B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 367B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.12-slim@sha256:f77ac9e44ae96ef2c90b8053ea08c31f8be030f824196b0ae4db6d462c84e51f
+#5 resolve docker.io/library/python:3.12-slim@sha256:f77ac9e44ae96ef2c90b8053ea08c31f8be030f824196b0ae4db6d462c84e51f 0.0s done
+#5 DONE 0.0s
+
+#6 [4/5] RUN pip install --no-cache-dir -r requirements.txt && useradd --system --uid 10001 roomfit
+#6 CACHED
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY requirements.txt .
+#8 CACHED
+
+#9 [5/5] COPY app ./app
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:3055fc337cd519ea68744811819f8dd2e5ee1631f04ca2b58b99c1934384231c done
+#10 exporting config sha256:822a797d0a4f1c548302a6e079fd750e77b2e882972b65ef21e7131c2672cec7 done
+#10 exporting attestation manifest sha256:49de112c188b99b64cdb94cfcc6c3fae7154e9c724dd2e22cd2764b5c65c7de7 0.0s done
+#10 exporting manifest list sha256:0b8e0b9b3e6b8311fefac91ba51b34485c2fd18c96c4b0aaf8db58b611809a10 0.0s done
+#10 naming to docker.io/library/roomfit-api:v1 done
+#10 unpacking to docker.io/library/roomfit-api:v1
+#10 unpacking to docker.io/library/roomfit-api:v1 0.0s done
+#10 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/wgsbd3ykby5taltrc74q5herm
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 638B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 94B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 367B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.12-slim@sha256:f77ac9e44ae96ef2c90b8053ea08c31f8be030f824196b0ae4db6d462c84e51f
+#5 resolve docker.io/library/python:3.12-slim@sha256:f77ac9e44ae96ef2c90b8053ea08c31f8be030f824196b0ae4db6d462c84e51f 0.0s done
+#5 DONE 0.0s
+
+#6 [4/5] RUN pip install --no-cache-dir -r requirements.txt && useradd --system --uid 10001 roomfit
+#6 CACHED
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY requirements.txt .
+#8 CACHED
+
+#9 [5/5] COPY app ./app
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:89e455a3d1883189ef30e2269ebfa2081eb27fd5165123591244996cf330365f done
+#10 exporting config sha256:b097e0d8d44336d501fd1fe9bbfb7e6b3e709aabd82e3a1c8fb78440528cc877 done
+#10 exporting attestation manifest sha256:1cb9466e9dea995c614f70beed9f6319f3f3ff63b10c8d7a05dd9120f68306b0 0.0s done
+#10 exporting manifest list sha256:75b204c4f474d34fdd5720f688a70fcab09ac63513a24df03ad56792289149a1
+#10 exporting manifest list sha256:75b204c4f474d34fdd5720f688a70fcab09ac63513a24df03ad56792289149a1 0.0s done
+#10 naming to docker.io/library/roomfit-api:v2 done
+#10 unpacking to docker.io/library/roomfit-api:v2 0.0s done
+#10 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/yheqez9owdfmt0gvqcw6hxcft
+Image: "roomfit-api:v1" with ID "sha256:0b8e0b9b3e6b8311fefac91ba51b34485c2fd18c96c4b0aaf8db58b611809a10" not yet present on node "roomfit-control-plane", loading...
+Image: "roomfit-api:v2" with ID "sha256:75b204c4f474d34fdd5720f688a70fcab09ac63513a24df03ad56792289149a1" not yet present on node "roomfit-control-plane", loading...
+configmap/roomfit-config unchanged
+deployment.apps/roomfit unchanged
+namespace/roomfit unchanged
+service/roomfit unchanged
+deployment "roomfit" successfully rolled out
+{"status":"ok","version":"v1"}
+deployment.apps/roomfit image updated
+Waiting for deployment "roomfit" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "roomfit" rollout to finish: 1 old replicas are pending termination...
+deployment "roomfit" successfully rolled out
+{"status":"ok","version":"v2"}
+deployment.apps/roomfit 
+REVISION  CHANGE-CAUSE
+7         <none>
+8         <none>
+
+deployment.apps/roomfit rolled back
+Waiting for deployment "roomfit" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "roomfit" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "roomfit" rollout to finish: 1 old replicas are pending termination...
+deployment "roomfit" successfully rolled out
+curl: (52) Empty reply from server
+{"status":"ok","version":"v1"}

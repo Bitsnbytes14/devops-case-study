@@ -1,0 +1,17 @@
+NAME                    STATUS   ROLES           AGE    VERSION
+roomfit-control-plane   Ready    control-plane   3m6s   v1.32.2
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                    NOMINATED NODE   READINESS GATES
+roomfit-5849545b79-5phdn   1/1     Running   0          75s   10.244.0.8   roomfit-control-plane   <none>           <none>
+roomfit-5849545b79-6bbb9   1/1     Running   0          75s   10.244.0.6   roomfit-control-plane   <none>           <none>
+roomfit-5849545b79-gx2zq   1/1     Running   0          75s   10.244.0.7   roomfit-control-plane   <none>           <none>
+NAME      TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+roomfit   NodePort   10.96.239.236   <none>        5000:30500/TCP   94s
+
+StatusCode : 200
+Content    : {"status":"ok","version":"v1"}
+             
+
+configmap/roomfit-config configured (dry run)
+deployment.apps/roomfit configured (dry run)
+namespace/roomfit configured (dry run)
+service/roomfit configured (dry run)

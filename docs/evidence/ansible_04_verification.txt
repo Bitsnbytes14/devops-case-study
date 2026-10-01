@@ -1,0 +1,78 @@
+wsl: Failed to translate 'X:\sem 3\flexi credit'
+
+PLAY [Configure RoomFit service] ***********************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [Install packages] ********************************************************
+ok: [localhost]
+
+TASK [Create RoomFit system user] **********************************************
+ok: [localhost]
+
+TASK [Create operator user] ****************************************************
+ok: [localhost]
+
+TASK [Create service paths] ****************************************************
+ok: [localhost] => (item=/opt/roomfit)
+ok: [localhost] => (item=/etc/roomfit)
+ok: [localhost] => (item=/var/log/roomfit)
+
+TASK [Copy application] ********************************************************
+ok: [localhost]
+
+TASK [Copy requirements] *******************************************************
+ok: [localhost]
+
+TASK [Create virtual environment] **********************************************
+ok: [localhost]
+
+TASK [Install Python requirements] *********************************************
+ok: [localhost]
+
+TASK [Install environment file] ************************************************
+ok: [localhost]
+
+TASK [Install systemd unit] ****************************************************
+ok: [localhost]
+
+TASK [Install logrotate policy] ************************************************
+ok: [localhost]
+
+TASK [Flush handlers] **********************************************************
+
+TASK [Wait for API port] *******************************************************
+ok: [localhost]
+
+TASK [Check health endpoint] ***************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=14   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+uid=997(roomfit) gid=986(roomfit) groups=986(roomfit)
+uid=1001(devops) gid=1002(devops) groups=1002(devops),986(roomfit)
+755 roomfit roomfit /opt/roomfit
+640 root roomfit /etc/roomfit/roomfit.env
+755 roomfit roomfit /var/log/roomfit
+active
+● roomfit.service - RoomFit allocation service
+     Loaded: loaded (/etc/systemd/system/roomfit.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-01 19:47:30 UTC; 35s ago
+ Invocation: 683af311898f4c5d91c2319e5f08ade9
+   Main PID: 2416 (gunicorn)
+      Tasks: 3 (limit: 8308)
+     Memory: 37.6M (peak: 37.9M)
+        CPU: 152ms
+     CGroup: /system.slice/roomfit.service
+             ├─2416 /opt/roomfit/venv/bin/python3 /opt/roomfit/venv/bin/gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 4 --access-logfile - app.main:app
+             └─2435 /opt/roomfit/venv/bin/python3 /opt/roomfit/venv/bin/gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 4 --access-logfile - app.main:app
+
+Oct 01 19:47:30 Soul gunicorn[2416]: [2026-10-01 19:47:30 +0000] [2416] [INFO] Listening at: http://0.0.0.0:5000 (2416)
+Oct 01 19:47:30 Soul gunicorn[2416]: [2026-10-01 19:47:30 +0000] [2416] [INFO] Using worker: gthread
+Oct 01 19:47:30 Soul gunicorn[2435]: [2026-10-01 19:47:30 +0000] [2435] [INFO] Booting worker with pid: 2435
+Oct 01 19:47:30 Soul gunicorn[2435]: 127.0.0.1 - - [01/Oct/2026:19:47:30 +0000] "GET /health HTTP/1.1" 200 36 "-" "ansible-httpget"
+Oct 01 19:48:05 Soul gunicorn[2435]: 127.0.0.1 - - [01/Oct/2026:19:48:05 +0000] "GET /health HTTP/1.1" 200 36 "-" "ansible-httpget"
+{"status":"ok","version":"ansible"}

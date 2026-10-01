@@ -1,0 +1,56 @@
+
+PLAY [Configure RoomFit service] ***********************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [Install packages] ********************************************************
+changed: [localhost]
+
+TASK [Create RoomFit system user] **********************************************
+changed: [localhost]
+
+TASK [Create operator user] ****************************************************
+changed: [localhost]
+
+TASK [Create service paths] ****************************************************
+changed: [localhost] => (item=/opt/roomfit)
+changed: [localhost] => (item=/etc/roomfit)
+changed: [localhost] => (item=/var/log/roomfit)
+
+TASK [Copy application] ********************************************************
+changed: [localhost]
+
+TASK [Copy requirements] *******************************************************
+changed: [localhost]
+
+TASK [Create virtual environment] **********************************************
+changed: [localhost]
+
+TASK [Install Python requirements] *********************************************
+changed: [localhost]
+
+TASK [Install environment file] ************************************************
+changed: [localhost]
+
+TASK [Install systemd unit] ****************************************************
+changed: [localhost]
+
+TASK [Install logrotate policy] ************************************************
+changed: [localhost]
+
+TASK [Flush handlers] **********************************************************
+
+RUNNING HANDLER [Restart RoomFit] **********************************************
+changed: [localhost]
+
+TASK [Wait for API port] *******************************************************
+ok: [localhost]
+
+TASK [Check health endpoint] ***************************************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=15   changed=12   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
