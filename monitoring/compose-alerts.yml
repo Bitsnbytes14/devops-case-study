@@ -1,0 +1,8 @@
+groups:
+  - name: roomfit-compose
+    rules:
+      - alert: RoomFitErrorRateHigh
+        expr: sum(rate(flask_http_request_total{status=~"5.."}[1m])) / sum(rate(flask_http_request_total[1m])) > 0.05
+        for: 10s
+        labels: { severity: warning }
+        annotations: { summary: RoomFit error rate is high }

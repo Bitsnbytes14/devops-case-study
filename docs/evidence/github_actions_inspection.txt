@@ -1,0 +1,59 @@
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36919045369
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36919045369/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36916036119
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36916036119/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36915783648
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36915783648/workflow
+Skip to content
+Navigation Menu
+Platform
+Solutions
+Resources
+Open Source
+Enterprise
+Pricing
+Search
+/
+Sign in
+Sign up
+Bitsnbytes14
+/
+devops-case-study
+Public
+Notifications
+Fork 0
+ Star 0
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security and quality
+Insights
+.github/workflows/pipeline.yml
+add verified ansible evidence #3
+Sign in to view logs
+Summary
+All jobs
+Run details
+Usage
+Workflow file
+Triggered via push 
+Bitsnbytes14
+pushed
+ 61cc19f
+main
+Status
+Failure
+Total duration
+�
+Artifacts
+�
+This workflow graph cannot be shown
+
+A graph will be generated the next time this workflow is run.
+
+Annotations
+1 error
+Invalid workflow file: .github/workflows/pipeline.yml#L32
+You have an error in your yaml syntax on line 32

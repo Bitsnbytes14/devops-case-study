@@ -2,10 +2,10 @@ services:
   api:
     build: .
     ports: ["5000:5000"]
-    environment: { APP_VERSION: compose, FAULT_RATE: "0", EXTRA_LATENCY_MS: "0" }
+    environment: { APP_VERSION: compose, FAULT_RATE: "${FAULT_RATE:-0}", EXTRA_LATENCY_MS: "${EXTRA_LATENCY_MS:-0}" }
   prometheus:
     image: prom/prometheus:v2.54.1
-    volumes: ["./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    volumes: ["./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro", "./monitoring/compose-alerts.yml:/etc/prometheus/alerts.yml:ro"]
     ports: ["9090:9090"]
   grafana:
     image: grafana/grafana:11.2.2

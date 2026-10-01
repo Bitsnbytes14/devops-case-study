@@ -1,0 +1,24 @@
+ Container devops-case-study-api-1  Recreate
+ Container devops-case-study-api-1  Recreated
+ Container devops-case-study-api-1  Starting
+ Container devops-case-study-api-1  Started
+{"status":"success","data":{"resultType":"vector","result":[]}}
+{"status":"success","data":{"alerts":[]}}
+wsl: Failed to translate 'X:\sem 3\flexi credit'
+wsl: Failed to start the systemd user session for 'ineff'. See journalctl for more details.
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1790885596.664,"25.742574257425744"]}]}}
+{"status":"success","data":{"alerts":[]}}
+{"status":"success","data":{"alerts":[]}}
+{"status":"success","data":{"groups":[{"name":"roomfit-compose","file":"/etc/prometheus/alerts.yml","rules":[{"state":"inactive","name":"RoomFitErrorRateHigh","query":"sum(rate(flask_http_request_total{status=~\"5..\"}[1m])) / sum(rate(flask_http_request_total[1m])) \u003e 0.05","duration":10,"keepFiringFor":0,"labels":{"severity":"warning"},"annotations":{"summary":"RoomFit error rate is high"},"alerts":[],"health":"ok","evaluationTime":0.000873245,"lastEvaluation":"2026-10-01T20:13:20.364027802Z","type":"alerting"}],"interval":60,"limit":0,"evaluationTime":0.000931172,"lastEvaluation":"2026-10-01T20:13:20.363974259Z"}]}}
+{"status":"success","data":{"alerts":[{"labels":{"alertname":"RoomFitErrorRateHigh","severity":"warning"},"annotations":{"summary":"RoomFit error rate is high"},"state":"pending","activeAt":"2026-10-01T20:13:20.373367227Z","value":"2.5742574257425743e-01"}]}}
+{"status":"success","data":{"alerts":[{"labels":{"alertname":"RoomFitErrorRateHigh","severity":"warning"},"annotations":{"summary":"RoomFit error rate is high"},"state":"pending","activeAt":"2026-10-01T20:13:20.373367227Z","value":"2.5742574257425743e-01"}]}}
+{"status":"success","data":{"groups":[{"name":"roomfit-compose","file":"/etc/prometheus/alerts.yml","rules":[{"state":"pending","name":"RoomFitErrorRateHigh","query":"sum(rate(flask_http_request_total{status=~\"5..\"}[1m])) / sum(rate(flask_http_request_total[1m])) \u003e 0.05","duration":10,"keepFiringFor":0,"labels":{"severity":"warning"},"annotations":{"summary":"RoomFit error rate is high"},"alerts":[{"labels":{"alertname":"RoomFitErrorRateHigh","severity":"warning"},"annotations":{"summary":"RoomFit error rate is high"},"state":"pending","activeAt":"2026-10-01T20:13:20.373367227Z","value":"2.5742574257425743e-01"}],"health":"ok","evaluationTime":0.002384556,"lastEvaluation":"2026-10-01T20:14:20.361830098Z","type":"alerting"}],"interval":60,"limit":0,"evaluationTime":0.002442072,"lastEvaluation":"2026-10-01T20:14:20.361796688Z"}]}}
+ Container devops-case-study-api-1  Recreate
+ Container devops-case-study-api-1  Recreated
+ Container devops-case-study-api-1  Starting
+ Container devops-case-study-api-1  Started
+wsl: Failed to translate 'X:\sem 3\flexi credit'
+wsl: Failed to start the systemd user session for 'ineff'. See journalctl for more details.
+{"status":"success","data":{"alerts":[]}}
+success=155 failure=45
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1790885995.181,"22.277227722772277"]}]}}

@@ -1,0 +1,12 @@
+ Container devops-case-study-api-1  Recreate
+ Container devops-case-study-api-1  Recreated
+ Container devops-case-study-api-1  Starting
+ Container devops-case-study-api-1  Started
+wsl: Failed to translate 'X:\sem 3\flexi credit'
+{"status":"ok","version":"compose"}
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{},"value":[1790885695.212,"0"]}]}}
+ Container devops-case-study-api-1  Recreate
+ Container devops-case-study-api-1  Recreated
+ Container devops-case-study-api-1  Starting
+ Container devops-case-study-api-1  Started
+{"status":"ok","version":"compose"}
