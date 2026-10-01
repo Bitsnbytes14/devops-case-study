@@ -18,6 +18,10 @@ Pass. Docker Compose started the API, Prometheus, and Grafana. Prometheus report
 
 Live browser images were captured for Grafana, Prometheus, service metrics, and Kubernetes health states. Terminal images are complete unedited evidence renders with a command header and source footer. The GitHub Actions images are public page captures. The latest failure found during this work was fixed by converting invalid workflow flow mappings and upgrading Flask from 3.1.0 to 3.1.3 after pip audit reported two known vulnerabilities.
 
+## GitHub Actions status
+
+Three workflow repairs were attempted. The first repaired invalid YAML flow mappings. The second upgraded Flask to 3.1.3 after the security audit reported two known vulnerabilities. The third named the Kind cluster roomfit for the deploy stage. On the final public run, test, security, and build_push passed, but deploy ended with exit code 1 after one minute. Public GitHub hides the step log without sign in, so the exact failing deploy command cannot be read anonymously. `github_actions_green_run.png` is therefore an honest screenshot of the final failed public run, not a green result.
+
 | Evidence file | Student screenshot command |
 | --- | --- |
 | `ansible_01_syntax_check.txt` | `ansible-playbook --syntax-check playbook.yml` |
