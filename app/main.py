@@ -1,6 +1,8 @@
 """RoomFit Flask API."""
 from __future__ import annotations
-import os, random, time
+import os
+import time
+from secrets import randbelow
 from flask import Flask, jsonify, request
 from prometheus_client import Counter, Gauge
 from prometheus_flask_exporter import PrometheusMetrics
@@ -29,7 +31,8 @@ def validate_student(student):
 def chaos():
     if request.path.startswith("/api/"):
         time.sleep(max(0, int(os.getenv("EXTRA_LATENCY_MS", "0"))) / 1000)
-        if random.random() < float(os.getenv("FAULT_RATE", "0")):
+        fault_roll = randbelow(1_000_000) / 1_000_000
+        if fault_roll < float(os.getenv("FAULT_RATE", "0")):
             return jsonify(error="injected fault"), 500
 
 @app.errorhandler(ValueError)
@@ -65,5 +68,3 @@ def allocation():
 def sample():
     students = [{"id": f"s{i}", "gender": "female" if i < 6 else "male", "sleep_schedule": 3 + i % 2, "cleanliness": 4, "noise_tolerance": 2 + i % 3, "study_hours": 3, "social_level": 3, "smoking": False, "alcohol": False, "room_size": 2} for i in range(12)]
     result = allocate(students); ALLOCATIONS.labels("success").inc(); STUDENTS.inc(12); return jsonify(result)
-
-if __name__ == "__main__": app.run(host="0.0.0.0", port=5000)
