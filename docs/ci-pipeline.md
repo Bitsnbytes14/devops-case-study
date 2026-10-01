@@ -9,4 +9,4 @@ The GitHub Actions workflow is [pipeline.yml](../.github/workflows/pipeline.yml)
 | Build | Docker image tagged with commit SHA and latest |
 | Deploy | Kind, rolling rollout, health smoke test |
 
-The pipeline diagram is [pipeline.png](diagrams/pipeline.png). The real public workflow capture is [github_actions_green_run.png](screenshots/github_actions_green_run.png). The current public deployment result and all repair attempts are recorded in [evidence/SUMMARY.md](evidence/SUMMARY.md).
+The repository diagram is [pipeline.png](diagrams/pipeline.png). The matching CA II reference diagram is [page-6-1.png](diagrams/ca-ii-reference/page-6-1.png). The real public workflow capture is [github_actions_green_run.png](screenshots/github_actions_green_run.png). The current public deployment result and all repair attempts are recorded in [evidence/SUMMARY.md](evidence/SUMMARY.md).
