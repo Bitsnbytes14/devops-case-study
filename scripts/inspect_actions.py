@@ -8,6 +8,6 @@ with sync_playwright() as play:
     print("\n".join(dict.fromkeys(links)))
     if links:
         page.goto(links[0], wait_until="networkidle")
-        print(page.locator("body").inner_text()[:12000])
+        print(page.locator("body").inner_text()[:12000].encode("ascii", "replace").decode())
         page.screenshot(path="docs/screenshots/github_actions_green_run.png", full_page=False)
     browser.close()

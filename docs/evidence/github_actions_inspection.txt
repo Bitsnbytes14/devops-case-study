@@ -57,3 +57,114 @@ Annotations
 1 error
 Invalid workflow file: .github/workflows/pipeline.yml#L32
 You have an error in your yaml syntax on line 32
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36921262005
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36921262005/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36919045369
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36919045369/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36916036119
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36916036119/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36915783648
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36915783648/workflow
+Traceback (most recent call last):
+  File "D:\devopscasestudy\devops-case-study\scripts\inspect_actions.py", line 11, in <module>
+    print(page.locator("body").inner_text()[:12000])
+  File "C:\Users\Ineff\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 687-688: character maps to <undefined>
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36921262005
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36921262005/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36919045369
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36919045369/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36916036119
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36916036119/workflow
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36915783648
+https://github.com/Bitsnbytes14/devops-case-study/actions/runs/36915783648/workflow
+Skip to content
+Navigation Menu
+Platform
+Solutions
+Resources
+Open Source
+Enterprise
+Pricing
+Search
+/
+Sign in
+Sign up
+Bitsnbytes14
+/
+devops-case-study
+Public
+Notifications
+Fork 0
+ Star 0
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security and quality
+Insights
+roomfit pipeline
+fix workflow and monitoring evidence #4
+Sign in to view logs
+Summary
+All jobs
+test
+security
+build_push
+deploy
+Run details
+Usage
+Workflow file
+Triggered via push 
+Bitsnbytes14
+pushed
+ 831db0f
+main
+Status
+Failure
+Total duration
+23s
+Artifacts
+?
+pipeline.yml
+on: push
+test
+13s
+security
+18s
+build_push
+0s
+deploy
+0s
+
+Oh hello! Nice to see you.
+
+Made with ?? by humans.txt
+
+Annotations
+1 error, 2 warnings, and 2 notices
+security
+Process completed with exit code 1.
+
+
+test
+Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Show more
+
+
+security
+Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Show more
+
+
+test
+"The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+Show more
+
+
+security
+"The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+Show more
