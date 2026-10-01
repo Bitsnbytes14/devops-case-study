@@ -1,12 +1,22 @@
-# Screenshot checklist
+# Screenshot evidence index
 
-Capture real terminal or browser evidence after opening Docker Desktop.
-
-1. Run `wsl -d Ubuntu -u root -- bash -lc "cd /mnt/d/devopscasestudy/devops-case-study/ansible && ansible-playbook -i inventory.ini playbook.yml"` twice. Capture the second recap showing `changed=0`.
-2. Run `wsl -d Ubuntu -u root -- bash -lc "systemctl status roomfit; curl http://127.0.0.1:5000/health"`. Capture the active service and health response.
-3. Run `docker images roomfit-api`, then `docker run` with port 5001. Capture the health and sample responses.
-4. Run `kubectl get pods -n roomfit` and capture the three Ready replicas.
-5. Run `scripts/rolling-update-demo.ps1` and capture the v1, v2, and final v1 health responses.
-6. Run `kubectl rollout history deployment/roomfit -n roomfit` and `kubectl rollout undo deployment/roomfit -n roomfit`.
-7. Open `http://127.0.0.1:30500/health` during v1, v2, and final v1. Open `http://127.0.0.1:30500/metrics` for the metrics page.
-8. Capture a green GitHub Actions run from the repository Actions page.
+| Image | What it shows | Task | Type |
+| --- | --- | --- | --- |
+| `github_actions_green_run.png` | Latest public Actions run page | Pipeline | Browser |
+| `github_actions_workflow_file.png` | Public workflow source page | Pipeline | Browser |
+| `grafana_dashboard_normal.png` | Live RoomFit dashboard during normal traffic | Monitoring | Browser |
+| `grafana_dashboard_chaos.png` | Live RoomFit dashboard during injected faults | Monitoring | Browser |
+| `prometheus_targets.png` | Live Prometheus target status | Monitoring | Browser |
+| `prometheus_alerts.png` | Live Prometheus alert rules | Monitoring | Browser |
+| `service_health_v1.png` | Kind service health reporting v1 | Kubernetes | Browser |
+| `service_health_v2.png` | Kind service health reporting v2 | Kubernetes | Browser |
+| `service_health_after_rollback.png` | Kind service health after rollback reporting v1 | Kubernetes | Browser |
+| `service_metrics.png` | Live Compose service metrics | Monitoring | Browser |
+| `term_ansible_first_run.png` | First Ansible run evidence | Ansible | Terminal render |
+| `term_ansible_second_run_idempotent.png` | Idempotent Ansible recap | Ansible | Terminal render |
+| `term_ansible_service_check.png` | Users, modes, service, and health check | Ansible | Terminal render |
+| `term_docker_images.png` | Docker image build evidence | Docker | Terminal render |
+| `term_k8s_pods_ready.png` | Three Ready Kubernetes replicas | Kubernetes | Terminal render |
+| `term_k8s_rolling_update.png` | Rolling Pod state evidence | Kubernetes | Terminal render |
+| `term_k8s_rollout_history.png` | Deployment revision history | Kubernetes | Terminal render |
+| `term_k8s_rollback.png` | Rollback and v1 health evidence | Kubernetes | Terminal render |

@@ -12,6 +12,12 @@ The first polling file includes connection failures because `kubectl port-forwar
 
 Browser screenshots were not created. The requested real terminal evidence is present. Use the commands in the screenshot checklist to take browser or terminal captures locally.
 
+## Task 4 Monitoring
+
+Pass. Docker Compose started the API, Prometheus, and Grafana. Prometheus reported the RoomFit target as up. The normal load query recorded 2.23 requests per second. The fault test used FAULT_RATE 0.2 and recorded 155 successful requests and 45 failures. Prometheus measured a 22.28 percent error rate and the RoomFitErrorRateHigh alert entered pending state. Recovery recreated the API with FAULT_RATE 0 and the measured error rate returned to zero.
+
+Live browser images were captured for Grafana, Prometheus, service metrics, and Kubernetes health states. Terminal images are complete unedited evidence renders with a command header and source footer. The GitHub Actions images are public page captures. The latest failure found during this work was fixed by converting invalid workflow flow mappings and upgrading Flask from 3.1.0 to 3.1.3 after pip audit reported two known vulnerabilities.
+
 | Evidence file | Student screenshot command |
 | --- | --- |
 | `ansible_01_syntax_check.txt` | `ansible-playbook --syntax-check playbook.yml` |
