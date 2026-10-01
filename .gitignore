@@ -7,3 +7,4 @@ htmlcov/
 *.pyc
 .env
 node_modules/
+.pip-audit-cache/
