@@ -4,7 +4,7 @@
 
 RoomFit is a Python 3.12 Flask allocation API. It evaluates gender, smoking, alcohol, room size, age, course, year, and budget constraints, then returns compatible room allocations. This repository is a self-contained CA II submission with executable delivery, configuration, Kubernetes, and monitoring evidence.
 
-![RoomFit service architecture](docs/diagrams/architecture.png)
+![RoomFit service architecture](docs/diagrams/architecture.svg)
 
 ## Submission map
 
