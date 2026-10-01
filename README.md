@@ -66,3 +66,7 @@ docs/         Case studies, slides, evidence
 Hard constraints are checked before scoring. Health probes, replicas, least privilege, rolling updates, and rollback make delivery safer. Metrics make uptime, latency, errors, and allocation activity visible. Read the case study answers in `docs/RoomFit_DevOps_Case_Studies.docx`.
 
 Real verification records are in [docs/evidence](docs/evidence/) and the image evidence index is in [docs/screenshots](docs/screenshots/).
+
+## CA II document map
+
+The report references these repository pages: [pipeline](docs/ci-pipeline.md), [Ansible](docs/ansible-deployment.md), [Kubernetes](docs/k8s-deployment.md), [monitoring](docs/monitoring.md), [architecture](docs/architecture.md), and [reflection](docs/reflection-report.md).
