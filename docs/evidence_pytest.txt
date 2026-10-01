@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.6, pytest-8.3.4, pluggy-1.6.0
+rootdir: D:\devopscasestudy\devops-case-study
+configfile: pytest.ini
+plugins: cov-6.0.0, anyio-4.13.0
+collected 5 items
+
+tests\test_api.py ..                                                     [ 40%]
+tests\test_engine.py ...                                                 [100%]
+
+---------- coverage: platform win32, python 3.12.6-final-0 -----------
+Name              Stmts   Miss  Cover
+-------------------------------------
+app\__init__.py       0      0   100%
+app\engine.py        66      1    98%
+-------------------------------------
+TOTAL                66      1    98%
+
+Required test coverage of 85% reached. Total coverage: 98.48%
+
+============================== 5 passed in 0.46s ==============================

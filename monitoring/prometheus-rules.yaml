@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata: { name: roomfit-alerts, namespace: roomfit }
+spec:
+  groups:
+    - name: roomfit
+      rules:
+        - alert: RoomFitServiceDown
+          expr: up{job="roomfit"} == 0
+          for: 1m
+        - alert: RoomFitErrorRateHigh
+          expr: sum(rate(flask_http_request_total{status=~"5.."}[2m])) / sum(rate(flask_http_request_total[2m])) > 0.05
+          for: 2m
+        - alert: RoomFitLatencyHigh
+          expr: histogram_quantile(0.95,sum(rate(flask_http_request_duration_seconds_bucket[5m])) by (le)) > 0.5
+          for: 5m

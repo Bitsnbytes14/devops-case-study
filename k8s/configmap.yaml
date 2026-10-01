@@ -1,0 +1,4 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: { name: roomfit-config, namespace: roomfit }
+data: { FAULT_RATE: "0", EXTRA_LATENCY_MS: "0" }

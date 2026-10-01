@@ -1,0 +1,46 @@
+name: roomfit pipeline
+on:
+  pull_request:
+  push: { branches: [main] }
+permissions: { contents: read }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements-dev.txt
+      - run: flake8 app tests
+      - run: pytest --cov=app --cov-fail-under=85
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements-dev.txt
+      - run: bandit -r app
+      - run: pip-audit -r requirements.txt
+  build_push:
+    if: github.event_name == 'push'
+    needs: [test, security]
+    permissions: { contents: read, packages: write }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with: { registry: ghcr.io, username: ${{ github.actor }}, password: ${{ secrets.GITHUB_TOKEN }} }
+      - uses: docker/build-push-action@v6
+        with: { push: true, tags: ghcr.io/bitsnbytes14/roomfit-allocation-service:${{ github.sha }},ghcr.io/bitsnbytes14/roomfit-allocation-service:latest, build-args: APP_VERSION=${{ github.sha }} }
+  deploy:
+    if: github.event_name == 'push'
+    needs: build_push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: helm/kind-action@v1
+      - run: docker build -t roomfit-allocation-service:v1 --build-arg APP_VERSION=${{ github.sha }} .
+      - run: kind load docker-image roomfit-allocation-service:v1
+      - run: kubectl apply -f k8s && kubectl rollout status deployment/roomfit -n roomfit --timeout=120s
+      - run: kubectl run smoke --rm -i --restart=Never --image=curlimages/curl -- curl -fsS http://roomfit.roomfit.svc.cluster.local:5000/health

@@ -1,0 +1,86 @@
+app\engine.py:8:80: E501 line too long (97 > 79 characters)
+app\engine.py:12:80: E501 line too long (81 > 79 characters)
+app\engine.py:14:80: E501 line too long (145 > 79 characters)
+app\engine.py:27:80: E501 line too long (99 > 79 characters)
+app\engine.py:28:80: E501 line too long (97 > 79 characters)
+app\engine.py:32:80: E501 line too long (119 > 79 characters)
+app\engine.py:33:80: E501 line too long (131 > 79 characters)
+app\engine.py:46:80: E501 line too long (81 > 79 characters)
+app\engine.py:49:80: E501 line too long (114 > 79 characters)
+app\engine.py:56:80: E501 line too long (125 > 79 characters)
+app\engine.py:64:80: E501 line too long (129 > 79 characters)
+app\engine.py:65:80: E501 line too long (80 > 79 characters)
+app\engine.py:69:80: E501 line too long (88 > 79 characters)
+app\engine.py:76:80: E501 line too long (172 > 79 characters)
+app\engine.py:83:80: E501 line too long (160 > 79 characters)
+app\engine.py:84:80: E501 line too long (184 > 79 characters)
+app\engine.py:85:80: E501 line too long (93 > 79 characters)
+app\main.py:3:10: E401 multiple imports on one line
+app\main.py:13:71: E702 multiple statements on one line (semicolon)
+app\main.py:13:80: E501 line too long (103 > 79 characters)
+app\main.py:14:71: E702 multiple statements on one line (semicolon)
+app\main.py:14:80: E501 line too long (92 > 79 characters)
+app\main.py:17:80: E501 line too long (86 > 79 characters)
+app\main.py:18:80: E501 line too long (145 > 79 characters)
+app\main.py:20:1: E302 expected 2 blank lines, found 1
+app\main.py:22:15: E701 multiple statements on one line (colon)
+app\main.py:22:80: E501 line too long (81 > 79 characters)
+app\main.py:23:60: E701 multiple statements on one line (colon)
+app\main.py:23:80: E501 line too long (117 > 79 characters)
+app\main.py:24:45: E701 multiple statements on one line (colon)
+app\main.py:24:80: E501 line too long (93 > 79 characters)
+app\main.py:25:80: E501 line too long (237 > 79 characters)
+app\main.py:25:171: E701 multiple statements on one line (colon)
+app\main.py:26:80: E501 line too long (137 > 79 characters)
+app\main.py:26:81: E701 multiple statements on one line (colon)
+app\main.py:28:1: E302 expected 2 blank lines, found 1
+app\main.py:35:1: E302 expected 2 blank lines, found 1
+app\main.py:38:1: E302 expected 2 blank lines, found 1
+app\main.py:39:80: E501 line too long (82 > 79 characters)
+app\main.py:44:1: E302 expected 2 blank lines, found 0
+app\main.py:46:40: E702 multiple statements on one line (semicolon)
+app\main.py:46:73: E702 multiple statements on one line (semicolon)
+app\main.py:46:80: E501 line too long (106 > 79 characters)
+app\main.py:48:17: E701 multiple statements on one line (colon)
+app\main.py:49:80: E501 line too long (106 > 79 characters)
+app\main.py:50:1: E302 expected 2 blank lines, found 0
+app\main.py:52:40: E702 multiple statements on one line (semicolon)
+app\main.py:53:25: E701 multiple statements on one line (colon)
+app\main.py:53:80: E501 line too long (80 > 79 characters)
+app\main.py:54:28: E701 multiple statements on one line (colon)
+app\main.py:56:17: E701 multiple statements on one line (colon)
+app\main.py:58:1: E302 expected 2 blank lines, found 0
+app\main.py:61:20: E701 multiple statements on one line (colon)
+app\main.py:62:28: E701 multiple statements on one line (colon)
+app\main.py:63:32: E702 multiple statements on one line (semicolon)
+app\main.py:63:69: E702 multiple statements on one line (semicolon)
+app\main.py:63:80: E501 line too long (121 > 79 characters)
+app\main.py:63:98: E702 multiple statements on one line (semicolon)
+app\main.py:64:1: E302 expected 2 blank lines, found 0
+app\main.py:66:80: E501 line too long (258 > 79 characters)
+app\main.py:67:32: E702 multiple statements on one line (semicolon)
+app\main.py:67:69: E702 multiple statements on one line (semicolon)
+app\main.py:67:80: E501 line too long (110 > 79 characters)
+app\main.py:67:87: E702 multiple statements on one line (semicolon)
+app\main.py:69:1: E305 expected 2 blank lines after class or function definition, found 1
+app\main.py:69:26: E701 multiple statements on one line (colon)
+tests\test_api.py:3:1: E302 expected 2 blank lines, found 0
+tests\test_api.py:4:31: E702 multiple statements on one line (semicolon)
+tests\test_api.py:4:80: E501 line too long (135 > 79 characters)
+tests\test_api.py:4:80: E702 multiple statements on one line (semicolon)
+tests\test_api.py:5:1: E302 expected 2 blank lines, found 0
+tests\test_api.py:6:31: E702 multiple statements on one line (semicolon)
+tests\test_api.py:6:80: E501 line too long (196 > 79 characters)
+tests\test_api.py:6:134: E702 multiple statements on one line (semicolon)
+tests\test_api.py:7:80: E501 line too long (84 > 79 characters)
+tests\test_engine.py:3:1: E302 expected 2 blank lines, found 1
+tests\test_engine.py:4:80: E501 line too long (229 > 79 characters)
+tests\test_engine.py:4:195: E702 multiple statements on one line (semicolon)
+tests\test_engine.py:4:217: E702 multiple statements on one line (semicolon)
+tests\test_engine.py:5:1: E302 expected 2 blank lines, found 0
+tests\test_engine.py:6:80: E501 line too long (81 > 79 characters)
+tests\test_engine.py:8:1: E302 expected 2 blank lines, found 0
+tests\test_engine.py:10:80: E501 line too long (112 > 79 characters)
+tests\test_engine.py:12:1: E302 expected 2 blank lines, found 0
+tests\test_engine.py:13:52: E702 multiple statements on one line (semicolon)
+tests\test_engine.py:13:80: E501 line too long (98 > 79 characters)

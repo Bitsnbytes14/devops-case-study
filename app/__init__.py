@@ -1,0 +1,1 @@
+"""RoomFit allocation service package."""

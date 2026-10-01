@@ -1,0 +1,42 @@
+---
+- name: Configure RoomFit service
+  hosts: roomfit
+  become: true
+  vars: { roomfit_root: /opt/roomfit }
+  tasks:
+    - name: Install packages
+      ansible.builtin.apt: { name: [python3, python3-venv, python3-pip, curl, git, logrotate], state: present, update_cache: true }
+    - name: Create RoomFit system user
+      ansible.builtin.user: { name: roomfit, system: true, shell: /usr/sbin/nologin, create_home: false }
+    - name: Create operator user
+      ansible.builtin.user: { name: devops, groups: roomfit, append: true }
+    - name: Create service paths
+      ansible.builtin.file: { path: '{{ item }}', state: directory, owner: roomfit, group: roomfit, mode: '0755' }
+      loop: ['{{ roomfit_root }}', /etc/roomfit, /var/log/roomfit]
+    - name: Copy application
+      ansible.builtin.copy: { src: ../app/, dest: '{{ roomfit_root }}/app/', owner: roomfit, group: roomfit }
+      notify: Restart RoomFit
+    - name: Copy requirements
+      ansible.builtin.copy: { src: ../requirements.txt, dest: '{{ roomfit_root }}/requirements.txt', owner: roomfit, group: roomfit }
+    - name: Create virtual environment
+      ansible.builtin.command: python3 -m venv {{ roomfit_root }}/venv
+      args: { creates: '{{ roomfit_root }}/venv/bin/python' }
+    - name: Install Python requirements
+      ansible.builtin.pip: { requirements: '{{ roomfit_root }}/requirements.txt', virtualenv: '{{ roomfit_root }}/venv' }
+    - name: Install environment file
+      ansible.builtin.template: { src: env.j2, dest: /etc/roomfit/roomfit.env, owner: root, group: roomfit, mode: '0640' }
+      notify: Restart RoomFit
+    - name: Install systemd unit
+      ansible.builtin.template: { src: roomfit.service.j2, dest: /etc/systemd/system/roomfit.service, mode: '0644' }
+      notify: Restart RoomFit
+    - name: Install logrotate policy
+      ansible.builtin.template: { src: logrotate.j2, dest: /etc/logrotate.d/roomfit, mode: '0644' }
+    - name: Flush handlers
+      ansible.builtin.meta: flush_handlers
+    - name: Wait for API port
+      ansible.builtin.wait_for: { port: 5000, timeout: 30 }
+    - name: Check health endpoint
+      ansible.builtin.uri: { url: http://127.0.0.1:5000/health, status_code: 200 }
+  handlers:
+    - name: Restart RoomFit
+      ansible.builtin.systemd: { name: roomfit, state: restarted, enabled: true, daemon_reload: true }

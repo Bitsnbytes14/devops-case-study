@@ -1,0 +1,5 @@
+grafana:
+  adminPassword: roomfit
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
