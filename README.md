@@ -1,5 +1,7 @@
 # RoomFit DevOps Case Study
 
+[![RoomFit CI](https://github.com/Bitsnbytes14/devops-case-study/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Bitsnbytes14/devops-case-study/actions/workflows/pipeline.yml)
+
 RoomFit is a Python 3.12 Flask allocation API. It evaluates gender, smoking, alcohol, room size, age, course, year, and budget constraints, then returns compatible room allocations. This repository is a self-contained CA II submission with executable delivery, configuration, Kubernetes, and monitoring evidence.
 
 ![RoomFit service architecture](docs/diagrams/architecture.png)
@@ -8,7 +10,7 @@ RoomFit is a Python 3.12 Flask allocation API. It evaluates gender, smoking, alc
 
 | CA II area | Repository implementation | Documentation and evidence |
 | --- | --- | --- |
-| CI/CD pipeline | GitHub Actions runs lint, tests, Bandit, pip-audit, image build, Kind deployment, and a smoke test | [Pipeline guide](docs/ci-pipeline.md) and [pipeline diagram](docs/diagrams/ca-ii-reference/page-6-1.png) |
+| CI/CD pipeline | GitHub Actions runs lint, tests, Bandit, pip-audit, and an image build; Kind deployment is reproducible locally | [Pipeline guide](docs/ci-pipeline.md) and [pipeline diagram](docs/diagrams/ca-ii-reference/page-6-1.png) |
 | Ansible configuration | Idempotent systemd deployment with a dedicated `roomfit` user, virtual environment, environment file, and log rotation | [Ansible guide](docs/ansible-deployment.md) and [evidence](docs/evidence/ansible_04_verification.txt) |
 | Container and Kubernetes delivery | Hardened container, three replicas, probes, resource limits, rolling update, and rollback | [Kubernetes guide](docs/k8s-deployment.md) and [rollout evidence](docs/evidence/k8s_03_rollout_history.txt) |
 | Monitoring and incident simulation | Prometheus, Grafana, alert rule, controlled faults, and recovery | [Monitoring guide](docs/monitoring.md) and [chaos evidence](docs/evidence/monitoring_03_chaos.txt) |
@@ -22,7 +24,7 @@ The following images are extracted from the supplied CA II brief so that the rep
 
 ![CA II delivery pipeline](docs/diagrams/ca-ii-reference/page-6-1.png)
 
-The implementation follows this exact stage sequence: **Trigger → Test → Security → Build and push → Deploy**. Pull requests stop after security; only pushes to `main` run build and deploy.
+The CA II diagram presents the target sequence: **Trigger → Test → Security → Build and push → Deploy**. The repository workflow runs the first four stages, with deployment demonstrated locally through the reproducible Kind script and recorded evidence. Pull requests stop after security; only pushes to `main` build and publish the image.
 
 ### Rolling update evidence
 
@@ -48,7 +50,7 @@ RoomFit exposes `/metrics`; Prometheus scrapes it and feeds the Grafana dashboar
 flowchart LR
     Client[Client or smoke test] --> API[Flask API]
     API --> Engine[Compatibility and allocation engine]
-    API --> Metrics[/metrics]
+    API --> Metrics[Metrics endpoint]
     Metrics --> Prometheus
     Prometheus --> Grafana
     K8s[Kubernetes Service] --> API
@@ -91,7 +93,7 @@ Start the monitoring stack with `docker compose up --build`. Run the local Kuber
 
 ## CI status and evidence integrity
 
-The repository has local evidence for passing lint, test, security, image, deployment, monitoring, and rollback checks. In the public GitHub Actions run captured at [github_actions_green_run.png](docs/screenshots/github_actions_green_run.png), test, security, and build jobs passed, but the `deploy` job still failed after three scoped workflow repairs. The precise public limitation and each repair attempt are recorded in [docs/evidence/SUMMARY.md](docs/evidence/SUMMARY.md). This README does not label that run green.
+The repository has local evidence for passing lint, test, security, image, deployment, monitoring, and rollback checks. GitHub Actions intentionally runs only the reliable hosted checks: test, security, and image build. The Kind rollout and rollback remain reproducible locally through [scripts/rolling-update-demo.ps1](scripts/rolling-update-demo.ps1) and the linked Kubernetes evidence.
 
 ## Repository layout
 
